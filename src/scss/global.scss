@@ -1,0 +1,126 @@
+ /* Google fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+ /* Mixins */
+ @mixin transition-ease {
+     -webkit-transition: all 0.5s cubic-bezier(0.935, -0.015, 0, 0.995);
+     -o-transition: all 0.5s cubic-bezier(0.935, -0.015, 0, 0.995);
+     transition: all 0.5s cubic-bezier(0.935, -0.015, 0, 0.995);
+ }
+
+ @mixin transition-delay-2s {
+     -webkit-transition-delay: .2s;
+     -o-transition-delay: .2s;
+     transition-delay: .2s;
+ }
+
+ @mixin transition-delay-4s {
+     -webkit-transition-delay: .4s;
+     -o-transition-delay: .4s;
+     transition-delay: .4s;
+ }
+
+
+ @mixin breakpoint($screen) {
+     @media (min-width: $screen) {
+         @content;
+     }
+ }
+
+ @mixin ie11 {
+
+     @media all and (-ms-high-contrast: none),
+     (-ms-high-contrast: active) {
+         @content;
+     }
+ }
+
+ html {
+     font-size: 62.5%;
+ }
+
+ body {
+     font-size: 1.6rem;
+     background: #019bdd;
+     overflow-x: hidden;
+     color: white;
+     font-family: 'Roboto',
+         sans-serif;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ h1 {
+     text-align: center;
+     text-transform: uppercase;
+     padding-bottom: 1rem;
+     display: inline-block;
+     border-bottom: 1px solid white;
+     margin: auto;
+     font-size: 4.5rem;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
+ /* Animaciones */
+
+ @-webkit-keyframes click {
+     50% {
+         opacity: 1;
+     }
+ }
+
+
+ @keyframes click {
+     50% {
+         opacity: 1;
+     }
+ }
+
+
+ @-webkit-keyframes height {
+     0% {
+         height: 0;
+     }
+
+     100% {
+         height: 7rem;
+     }
+ }
+
+ @keyframes height {
+     0% {
+         height: 0;
+     }
+
+     100% {
+         height: 7rem;
+     }
+ }
+
+ @-webkit-keyframes appear {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
+ @keyframes appear {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
